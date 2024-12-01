@@ -1,0 +1,29 @@
+{
+    "name": "osw3/symfony-ecommerce",
+    "description": "En eCommercesupport for Symfony.",
+    "homepage": "https://osw3.net",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+		{
+			"name": "Project Contributors",
+			"homepage": "https://github.com/osw3/symfony-ecommerce/graphs/contributors"
+		}
+    ],
+    "autoload": {
+        "psr-4": {
+            "OSW3\\Ecommerce\\": "src/"
+        }
+    },
+    "require": {
+        "doctrine/dbal": "^3",
+        "doctrine/doctrine-bundle": "^2.13",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "doctrine/orm": "^3.3",
+        "symfony/options-resolver": "6.4.*",
+        "symfony/twig-bundle": "6.4.*",
+        "symfony/ux-twig-component": "^2.22"
+    }
+}
