@@ -1,0 +1,5 @@
+controllers:
+    resource   : '@EcommerceBundle/Controller/'
+    type       : attribute
+    name_prefix: 'ecommerce:'
+    prefix     : /

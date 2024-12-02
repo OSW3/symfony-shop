@@ -2,11 +2,11 @@
 
 namespace OSW3\Ecommerce\Controller\Catalog;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use OSW3\Ecommerce\Provider\ControllerProvider;
 
-class ProductController extends AbstractController
+class ProductController extends ControllerProvider
 {
     #[Route('/catalog/product', name: 'app_catalog_product')]
     public function index(): Response
