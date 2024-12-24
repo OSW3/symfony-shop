@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use OSW3\Ecommerce\Trait\Entity\Properties\Language\MethodsTrait;
 use Symfony\Component\Serializer\Annotation\Groups;
 
-trait LanguageNullableTrait
+trait LanguageTrait
 {
     use MethodsTrait;
     

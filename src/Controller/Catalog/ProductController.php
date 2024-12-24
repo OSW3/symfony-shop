@@ -8,7 +8,7 @@ use OSW3\Ecommerce\Provider\ControllerProvider;
 
 class ProductController extends ControllerProvider
 {
-    #[Route('/catalog/product', name: 'app_catalog_product')]
+    #[Route('/catalog/product', name: 'product:index')]
     public function index(): Response
     {
         return $this->render('catalog/product/index.html.twig', [
