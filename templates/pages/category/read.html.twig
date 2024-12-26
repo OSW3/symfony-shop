@@ -1,0 +1,18 @@
+{# * ------------------------------------------------ #}
+{# * - Page : Category                              - #}
+{# * - Part : Read                                  - #}
+{# * ------------------------------------------------ #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>Category details</h2>
+
+<div><strong>Category Id</strong> : {{ category.id }}</div>
+<div><strong>Category Slug</strong> : {{ category.slug }}</div>
+<div><strong>Category Name</strong> : {{ category.name }}</div>
+<div><strong>Category Icon</strong> : {{ category.icon }}</div>
+<div><strong>Category Color</strong> : {{ category.color }}</div>
+<div><strong>Category Illustration</strong> : {{ category.illustration }}</div>
+<div><strong>Category IsActive</strong> : {{ category.isActive ? "Yes" : "No" }}</div>
+
+{% endblock %}

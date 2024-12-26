@@ -1,0 +1,17 @@
+{# * ------------------------------------------------ #}
+{# * - Page : Tag                                   - #}
+{# * - Part : Index                                 - #}
+{# * ------------------------------------------------ #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>All tags</h2>
+
+{% for tag in tags %}
+<div>
+    <div><strong>Tag Name</strong> : <a href="{{ path('ecommerce:tag:read', {id: tag.id}) }}">{{ tag.name }}</a></div>
+    <hr>
+</div>
+{% endfor %}
+
+{% endblock %}

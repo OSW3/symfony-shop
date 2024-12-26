@@ -1,0 +1,16 @@
+{# * ------------------------------------------------ #}
+{# * - Page : Tag                                   - #}
+{# * - Part : Read                                  - #}
+{# * ------------------------------------------------ #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>Tag details</h2>
+
+<div><strong>Tag Id</strong> : {{ tag.id }}</div>
+<div><strong>Tag Slug</strong> : {{ tag.slug }}</div>
+<div><strong>Tag Name</strong> : {{ tag.name }}</div>
+<div><strong>Tag Color</strong> : {{ tag.color }}</div>
+<div><strong>Tag IsActive</strong> : {{ tag.isActive ? "Yes" : "No" }}</div>
+
+{% endblock %}

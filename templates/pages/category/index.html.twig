@@ -1,0 +1,17 @@
+{# * ------------------------------------------------ #}
+{# * - Page : Category                              - #}
+{# * - Part : Index                                 - #}
+{# * ------------------------------------------------ #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>All categories</h2>
+
+{% for category in categories %}
+<div>
+    <div><strong>Category Name</strong> : <a href="{{ path('ecommerce:category:read', {id: category.id}) }}">{{ category.name }}</a></div>
+    <hr>
+</div>
+{% endfor %}
+
+{% endblock %}

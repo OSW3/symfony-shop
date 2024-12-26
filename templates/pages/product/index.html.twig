@@ -1,0 +1,18 @@
+{# * ------------------------------------------------ #}
+{# * - Page : Product                               - #}
+{# * - Part : Index                                 - #}
+{# * ------------------------------------------------ #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>All products</h2>
+
+{% for product in products %}
+<div>
+    <div><strong>Product Id</strong> : <a href="{{ path('ecommerce:product:read', {id: product.id}) }}">{{ product.id }}</a></div>
+    <div><strong>Product Name</strong> : <a href="{{ path('ecommerce:product:read', {id: product.id}) }}">{{ translation(product, 'name', language) }}</a></div>
+    <hr>
+</div>
+{% endfor %}
+
+{% endblock %}

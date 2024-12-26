@@ -1,0 +1,15 @@
+{# * ------------------------------------------------ #}
+{# * - Page : Product                               - #}
+{# * - Part : Read                                  - #}
+{# * ------------------------------------------------ #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>Product details</h2>
+
+<div><strong>Product Id</strong> : {{ product.id }}</div>
+<div><strong>Product Name</strong> : {{ translation(product, 'name', language) }}</div>
+<div><strong>Product Short Description</strong> : {{ translation(product, 'short_description', language) }}</div>
+<div><strong>Product Description</strong> : {{ translation(product, 'description', language) }}</div>
+
+{% endblock %}

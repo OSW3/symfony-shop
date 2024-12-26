@@ -9,7 +9,6 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use OSW3\Ecommerce\Repository\Tag\TagRepository;
 use Symfony\Component\Serializer\Attribute\Groups;
-use OSW3\Ecommerce\Trait\Entity\Properties\Workflow\IsActiveTrait;
 
 #[ORM\Entity(repositoryClass: TagRepository::class)]
 #[ORM\Table(name: 'tag')]
