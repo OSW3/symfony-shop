@@ -1,20 +1,58 @@
 <?php
-
 namespace OSW3\Ecommerce\Entity\Product\Attribute;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use OSW3\Ecommerce\Trait\Entity\Properties\Id\IdTrait;
-use OSW3\Ecommerce\Trait\Entity\Properties\Name\NameTrait;
-use OSW3\Ecommerce\Trait\Entity\Properties\Language\LanguageTrait;
+use Symfony\Component\Serializer\Attribute\Groups;
 use OSW3\Ecommerce\Repository\Product\Attribute\TranslationRepository;
 
 #[ORM\Entity(repositoryClass: TranslationRepository::class)]
 #[ORM\Table(name: 'attribute_translation')]
 class Translation
 {
-    use IdTrait;
-    use LanguageTrait;
-    use NameTrait;
+    // ID's
+    // --
+    
+    /**
+     * Primary Key
+     *
+     * @var integer|null
+     */
+    #[Groups(['id'])]
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(name: "id", type: Types::INTEGER, options: ['unsigned' => true])]
+    private ?int $id = null;
+
+
+    // TRANSLATION DATA
+    // --
+    
+    /**
+     * Translation language
+     *
+     * @var string
+     */
+    #[Groups(['language'])]
+    #[ORM\Column(name: "language", type: Types::STRING, length: 2, options: ['fixed' => true], nullable: false)]
+    private string $language;
+
+    /**
+     * Translation name / key
+     *
+     * @var string|null
+     */
+    #[ORM\Column(name: "name", type: Types::STRING, length: 255, nullable: false)]
+    private ?string $name = null;
+
+    /**
+     * Translation description  /value
+     *
+     * @var string|null
+     */
+    #[Groups("description")]
+    #[ORM\Column(name: "description", type: Types::TEXT, nullable: true)]
+    private ?string $description = null;
 
 
     // RELATIONSHIP
@@ -26,6 +64,55 @@ class Translation
 
 
     // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+    // ID's
+    // --
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+
+    // TRANSLATION DATA
+    // --
+
+    public function setLanguage(string $language): static
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    public function setName(string $name): static
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+
+    // RELATIONSHIP
+    // --
 
     public function getAttribute(): ?Attribute
     {

@@ -1,5 +1,4 @@
 <?php
-
 namespace OSW3\Ecommerce\Repository\Category;
 
 use Doctrine\Persistence\ManagerRegistry;

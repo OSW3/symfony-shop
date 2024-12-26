@@ -1,6 +1,6 @@
 {
     "name": "osw3/symfony-ecommerce",
-    "description": "En eCommercesupport for Symfony.",
+    "description": "An e-commerce support for Symfony.",
     "homepage": "https://osw3.net",
     "type": "symfony-bundle",
     "license": "MIT",

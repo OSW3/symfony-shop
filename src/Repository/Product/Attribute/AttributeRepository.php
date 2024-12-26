@@ -1,5 +1,4 @@
 <?php
-
 namespace OSW3\Ecommerce\Repository\Product\Attribute;
 
 use Doctrine\Persistence\ManagerRegistry;

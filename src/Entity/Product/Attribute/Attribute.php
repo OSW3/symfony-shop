@@ -1,23 +1,35 @@
 <?php
-
 namespace OSW3\Ecommerce\Entity\Product\Attribute;
 
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\UuidInterface as UUID;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use OSW3\Ecommerce\Trait\Entity\Properties\Id\UuidTrait;
-use OSW3\Ecommerce\Repository\Attribute\Attribute\AttributeRepository;
+use Symfony\Component\Serializer\Attribute\Groups;
+use OSW3\Ecommerce\Repository\Product\Attribute\AttributeRepository;
 
 #[ORM\Entity(repositoryClass: AttributeRepository::class)]
 #[ORM\Table(name: 'attribute')]
 class Attribute
 {
-    use UuidTrait;
+    // ID's
+    // --
+
+    /**
+     * Primary key
+     *
+     * @var uuid|null
+     */
+    #[Groups(['id'])]
+    #[ORM\Id]
+    #[ORM\Column(type: "uuid", unique: true)]
+    #[ORM\GeneratedValue(strategy: "CUSTOM")]
+    #[ORM\CustomIdGenerator(class: "Ramsey\Uuid\Doctrine\UuidGenerator")]
+    private ?uuid $id = null;
 
 
     // RELATIONSHIP
     // --
-
 
     /**
      * @var Collection<int, Translation>
@@ -33,6 +45,19 @@ class Attribute
         $this->translations = new ArrayCollection();
     }
 
+
+    // ID's
+    // --
+
+    public function getId(): ?uuid
+    {
+        return $this->id;
+    }
+
+
+    // RELATIONSHIP
+    // --
+
     /**
      * @return Collection<int, Translation>
      */
@@ -40,7 +65,6 @@ class Attribute
     {
         return $this->translations;
     }
-
     public function addTranslation(Translation $translation): static
     {
         if (!$this->translations->contains($translation)) {
@@ -50,7 +74,6 @@ class Attribute
 
         return $this;
     }
-
     public function removeTranslation(Translation $translation): static
     {
         if ($this->translations->removeElement($translation)) {

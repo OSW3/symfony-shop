@@ -1,5 +1,4 @@
 <?php
-
 namespace OSW3\Ecommerce\Repository\Tag;
 
 use OSW3\Ecommerce\Entity\Tag\Tag;
