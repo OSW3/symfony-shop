@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Ecommerce\Provider;
+namespace OSW3\Shop\Provider;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 

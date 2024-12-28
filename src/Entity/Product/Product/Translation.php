@@ -1,11 +1,11 @@
 <?php
-namespace OSW3\Ecommerce\Entity\Product\Product;
+namespace OSW3\Shop\Entity\Product\Product;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use OSW3\Ecommerce\Entity\Product\Product\Product;
+use OSW3\Shop\Entity\Product\Product\Product;
 use Symfony\Component\Serializer\Attribute\Groups;
-use OSW3\Ecommerce\Repository\Product\Product\TranslationRepository;
+use OSW3\Shop\Repository\Product\Product\TranslationRepository;
 
 #[ORM\Entity(repositoryClass: TranslationRepository::class)]
 #[ORM\Table(name: 'product_translation')]

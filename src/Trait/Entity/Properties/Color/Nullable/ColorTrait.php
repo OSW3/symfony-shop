@@ -1,10 +1,10 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Properties\Color\Nullable;
+namespace OSW3\Shop\Trait\Entity\Properties\Color\Nullable;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
-use OSW3\Ecommerce\Trait\Entity\Properties\Color\MethodsTrait;
+use OSW3\Shop\Trait\Entity\Properties\Color\MethodsTrait;
 
 trait ColorTrait
 {

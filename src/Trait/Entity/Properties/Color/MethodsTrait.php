@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Properties\Color;
+namespace OSW3\Shop\Trait\Entity\Properties\Color;
 
 trait MethodsTrait
 {

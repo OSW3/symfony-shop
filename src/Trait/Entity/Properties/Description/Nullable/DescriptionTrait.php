@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Properties\Description\Nullable;
+namespace OSW3\Shop\Trait\Entity\Properties\Description\Nullable;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;

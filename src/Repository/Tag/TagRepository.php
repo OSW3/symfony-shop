@@ -1,7 +1,7 @@
 <?php
-namespace OSW3\Ecommerce\Repository\Tag;
+namespace OSW3\Shop\Repository\Tag;
 
-use OSW3\Ecommerce\Entity\Tag\Tag;
+use OSW3\Shop\Entity\Tag\Tag;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 

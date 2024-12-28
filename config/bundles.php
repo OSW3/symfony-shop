@@ -1,5 +1,5 @@
 <?php
 
 return [
-    OSW3\Ecommerce\EcommerceBundle::class => ['all' => true],
+    OSW3\Shop\ShopBundle::class => ['all' => true],
 ];

@@ -1,11 +1,11 @@
 <?php 
-namespace OSW3\Ecommerce;
+namespace OSW3\Shop;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use OSW3\Ecommerce\DependencyInjection\Configuration;
+use OSW3\Shop\DependencyInjection\Configuration;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class EcommerceBundle extends Bundle
+class ShopBundle extends Bundle
 {
     public function build(ContainerBuilder $container): void
     {

@@ -1,5 +1,5 @@
 {
-    "name": "osw3/symfony-ecommerce",
+    "name": "osw3/symfony-shop",
     "description": "An e-commerce support for Symfony.",
     "homepage": "https://osw3.net",
     "type": "symfony-bundle",
@@ -9,12 +9,12 @@
     "authors": [
 		{
 			"name": "Project Contributors",
-			"homepage": "https://github.com/osw3/symfony-ecommerce/graphs/contributors"
+			"homepage": "https://github.com/osw3/symfony-shop/graphs/contributors"
 		}
     ],
     "autoload": {
         "psr-4": {
-            "OSW3\\Ecommerce\\": "src/"
+            "OSW3\\Shop\\": "src/"
         }
     },
     "require": {
@@ -24,6 +24,8 @@
         "doctrine/orm": "^3.3",
         "gedmo/doctrine-extensions": "*",
         "ramsey/uuid-doctrine": "^2.1",
+        "shopify/shopify-api": "*",
+        "symfony/http-client": "6.4.*",
         "symfony/options-resolver": "6.4.*",
         "symfony/twig-bundle": "6.4.*",
         "symfony/ux-twig-component": "^2.22"

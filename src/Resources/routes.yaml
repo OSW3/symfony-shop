@@ -1,5 +1,5 @@
 controllers:
-    resource   : '@EcommerceBundle/Controller/'
+    resource   : '@ShopBundle/Controller/'
     type       : attribute
-    name_prefix: 'ecommerce:'
+    name_prefix: 'shop:'
     prefix     : /

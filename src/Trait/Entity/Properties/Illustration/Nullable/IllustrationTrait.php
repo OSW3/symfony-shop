@@ -1,10 +1,10 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Properties\Illustration\Nullable;
+namespace OSW3\Shop\Trait\Entity\Properties\Illustration\Nullable;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
-use OSW3\Ecommerce\Trait\Entity\Properties\Illustration\MethodsTrait;
+use OSW3\Shop\Trait\Entity\Properties\Illustration\MethodsTrait;
 
 trait IllustrationTrait
 {

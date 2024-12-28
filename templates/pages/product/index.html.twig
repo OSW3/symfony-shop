@@ -9,8 +9,8 @@
 
 {% for product in products %}
 <div>
-    <div><strong>Product Id</strong> : <a href="{{ path('ecommerce:product:read', {id: product.id}) }}">{{ product.id }}</a></div>
-    <div><strong>Product Name</strong> : <a href="{{ path('ecommerce:product:read', {id: product.id}) }}">{{ translation(product, 'name', language) }}</a></div>
+    <div><strong>Product Id</strong> : <a href="{{ path('shop:product:read', {id: product.id}) }}">{{ product.id }}</a></div>
+    <div><strong>Product Name</strong> : <a href="{{ path('shop:product:read', {id: product.id}) }}">{{ translation(product, 'name', language) }}</a></div>
     <hr>
 </div>
 {% endfor %}

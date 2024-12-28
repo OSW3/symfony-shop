@@ -1,8 +1,8 @@
 <?php
-namespace OSW3\Ecommerce\Repository\Product\Product;
+namespace OSW3\Shop\Repository\Product\Product;
 
 use Doctrine\Persistence\ManagerRegistry;
-use OSW3\Ecommerce\Entity\Product\Product\Translation;
+use OSW3\Shop\Entity\Product\Product\Translation;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**

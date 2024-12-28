@@ -1,17 +1,17 @@
 <?php
-namespace OSW3\Ecommerce\Controller;
+namespace OSW3\Shop\Controller;
 
 use Symfony\Component\Filesystem\Path;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use OSW3\Ecommerce\Provider\ControllerProvider;
-use OSW3\Ecommerce\Entity\Product\Product\Product;
-use OSW3\Ecommerce\Repository\Product\Product\ProductRepository;
+use OSW3\Shop\Provider\ControllerProvider;
+use OSW3\Shop\Entity\Product\Product\Product;
+use OSW3\Shop\Repository\Product\Product\ProductRepository;
 
 #[Route('/', name: 'product:')]
 class ProductController extends ControllerProvider
 {
-    private const VIEWS = '@Ecommerce/pages/product';
+    private const VIEWS = '@Shop/pages/product';
 
     private const LANGUAGE = 'fr';
 

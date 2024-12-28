@@ -9,7 +9,7 @@
 
 {% for tag in tags %}
 <div>
-    <div><strong>Tag Name</strong> : <a href="{{ path('ecommerce:tag:read', {id: tag.id}) }}">{{ tag.name }}</a></div>
+    <div><strong>Tag Name</strong> : <a href="{{ path('shop:tag:read', {id: tag.id}) }}">{{ tag.name }}</a></div>
     <hr>
 </div>
 {% endfor %}

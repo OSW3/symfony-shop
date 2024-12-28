@@ -1,12 +1,11 @@
 <?php
-
-namespace OSW3\Ecommerce\Entity\Tag;
+namespace OSW3\Shop\Entity\Tag;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Serializer\Attribute\Groups;
-use OSW3\Ecommerce\Repository\Tag\TranslationRepository;
+use OSW3\Shop\Repository\Tag\TranslationRepository;
 
 #[ORM\Entity(repositoryClass: TranslationRepository::class)]
 #[ORM\Table(name: 'tag_translation')]

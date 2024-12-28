@@ -1,17 +1,17 @@
 <?php
-namespace OSW3\Ecommerce\Controller;
+namespace OSW3\Shop\Controller;
 
 use Symfony\Component\Filesystem\Path;
-use OSW3\Ecommerce\Entity\Tag\Tag;
+use OSW3\Shop\Entity\Tag\Tag;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use OSW3\Ecommerce\Provider\ControllerProvider;
-use OSW3\Ecommerce\Repository\Tag\TagRepository;
+use OSW3\Shop\Provider\ControllerProvider;
+use OSW3\Shop\Repository\Tag\TagRepository;
 
 #[Route('/', name: 'tag:')]
 class TagController extends ControllerProvider
 {
-    private const VIEWS = '@Ecommerce/pages/tag';
+    private const VIEWS = '@Shop/pages/tag';
 
     #[Route('/tags', name: 'index', methods: ['HEAD', 'GET'])]
     public function index(TagRepository $tagRepository): Response

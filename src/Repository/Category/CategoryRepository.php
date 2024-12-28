@@ -1,8 +1,8 @@
 <?php
-namespace OSW3\Ecommerce\Repository\Category;
+namespace OSW3\Shop\Repository\Category;
 
 use Doctrine\Persistence\ManagerRegistry;
-use OSW3\Ecommerce\Entity\Category\Category;
+use OSW3\Shop\Entity\Category\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**

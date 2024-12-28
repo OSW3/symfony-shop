@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Properties\Workflow;
+namespace OSW3\Shop\Trait\Entity\Properties\Workflow;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;

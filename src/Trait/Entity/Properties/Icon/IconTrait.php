@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Properties\Icon;
+namespace OSW3\Shop\Trait\Entity\Properties\Icon;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;

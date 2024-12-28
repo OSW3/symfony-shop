@@ -1,15 +1,15 @@
 <?php 
-namespace OSW3\Ecommerce\DependencyInjection;
+namespace OSW3\Shop\DependencyInjection;
 
 use Symfony\Component\Filesystem\Path;
 use Symfony\Component\Config\FileLocator;
-use OSW3\Ecommerce\DependencyInjection\Configuration;
+use OSW3\Shop\DependencyInjection\Configuration;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 
-class EcommerceExtension extends Extension implements PrependExtensionInterface 
+class ShopExtension extends Extension implements PrependExtensionInterface 
 {
 	/**
 	 * Bundle configuration Injection

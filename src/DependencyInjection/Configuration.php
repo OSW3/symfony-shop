@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Ecommerce\DependencyInjection;
+namespace OSW3\Shop\DependencyInjection;
 
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Filesystem\Path;
@@ -7,25 +7,25 @@ use Symfony\Component\Config\Definition\ArrayNode;
 use Symfony\Component\Config\Definition\ScalarNode;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\PrototypedArrayNode;
-use OSW3\Ecommerce\DependencyInjection\DefinitionConfigurator;
+use OSW3\Shop\DependencyInjection\DefinitionConfigurator;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
 	/**
 	 * define the name of the configuration tree.
-	 * > /config/packages/manager.yaml
+	 * > /config/packages/Shop.yaml
 	 *
 	 * @var string
 	 */
-	public const string NAME = "ecommerce";
+	public const string NAME = "shop";
 
 	/**
 	 * Define the translation domain
 	 *
 	 * @var string
 	 */
-	public const string DOMAIN = 'ecommerce';
+	public const string DOMAIN = 'shop';
 
 	/**
 	 * Update and return the Configuration Builder

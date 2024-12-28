@@ -1,8 +1,8 @@
 <?php
-namespace OSW3\Ecommerce\Repository\Tag;
+namespace OSW3\Shop\Repository\Tag;
 
 use Doctrine\Persistence\ManagerRegistry;
-use OSW3\Ecommerce\Entity\Tag\Translation;
+use OSW3\Shop\Entity\Tag\Translation;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**

@@ -1,5 +1,5 @@
 <?php
-namespace OSW3\Ecommerce\Entity\Tag;
+namespace OSW3\Shop\Entity\Tag;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -7,7 +7,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Ramsey\Uuid\UuidInterface as UUID;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
-use OSW3\Ecommerce\Repository\Tag\TagRepository;
+use OSW3\Shop\Repository\Tag\TagRepository;
 use Symfony\Component\Serializer\Attribute\Groups;
 
 #[ORM\Entity(repositoryClass: TagRepository::class)]

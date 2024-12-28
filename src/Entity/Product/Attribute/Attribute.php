@@ -1,12 +1,12 @@
 <?php
-namespace OSW3\Ecommerce\Entity\Product\Attribute;
+namespace OSW3\Shop\Entity\Product\Attribute;
 
 use Doctrine\ORM\Mapping as ORM;
 use Ramsey\Uuid\UuidInterface as UUID;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Attribute\Groups;
-use OSW3\Ecommerce\Repository\Product\Attribute\AttributeRepository;
+use OSW3\Shop\Repository\Product\Attribute\AttributeRepository;
 
 #[ORM\Entity(repositoryClass: AttributeRepository::class)]
 #[ORM\Table(name: 'attribute')]

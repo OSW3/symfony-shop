@@ -9,7 +9,7 @@
 
 {% for category in categories %}
 <div>
-    <div><strong>Category Name</strong> : <a href="{{ path('ecommerce:category:read', {id: category.id}) }}">{{ category.name }}</a></div>
+    <div><strong>Category Name</strong> : <a href="{{ path('shop:category:read', {id: category.id}) }}">{{ category.name }}</a></div>
     <hr>
 </div>
 {% endfor %}

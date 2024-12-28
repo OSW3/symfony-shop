@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Ecommerce\DependencyInjection;
+namespace OSW3\Shop\DependencyInjection;
 
 class DefinitionConfigurator
 {

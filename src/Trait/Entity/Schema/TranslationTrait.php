@@ -1,9 +1,9 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Schema;
+namespace OSW3\Shop\Trait\Entity\Schema;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use OSW3\Ecommerce\Trait\Entity\Properties\Id\IdTrait;
+use OSW3\Shop\Trait\Entity\Properties\Id\IdTrait;
 
 trait TranslationTrait
 {

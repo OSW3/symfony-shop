@@ -1,10 +1,10 @@
 <?php
-namespace OSW3\Ecommerce\Entity\Category;
+namespace OSW3\Shop\Entity\Category;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
-use OSW3\Ecommerce\Repository\Category\TranslationRepository;
+use OSW3\Shop\Repository\Category\TranslationRepository;
 
 #[ORM\Entity(repositoryClass: TranslationRepository::class)]
 #[ORM\Table(name: 'category_translation')]

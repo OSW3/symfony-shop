@@ -1,10 +1,10 @@
 <?php 
-namespace OSW3\Ecommerce\Trait\Entity\Properties\Language;
+namespace OSW3\Shop\Trait\Entity\Properties\Language;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
-use OSW3\Ecommerce\Trait\Entity\Properties\Language\MethodsTrait;
+use OSW3\Shop\Trait\Entity\Properties\Language\MethodsTrait;
 
 trait LanguageTrait
 {

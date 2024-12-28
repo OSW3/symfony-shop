@@ -11,5 +11,15 @@
 <div><strong>Product Name</strong> : {{ translation(product, 'name', language) }}</div>
 <div><strong>Product Short Description</strong> : {{ translation(product, 'short_description', language) }}</div>
 <div><strong>Product Description</strong> : {{ translation(product, 'description', language) }}</div>
+<hr>
+<h3>Variants</h3>
+{% for variant in product.variants %}
+<div><strong>Variant SKU</strong> : {{ variant.sku }}</div>
+<div><strong>Variant Name</strong> : {{ variant.name }}</div>
+<div><strong>Variant Position</strong> : {{ variant.position }}</div>
+<div><strong>Variant Price</strong> : {{ variant.price }}</div>
+<div><strong>Variant Taxable</strong> : {{ variant.taxable }}</div>
+<br>
+{% endfor %}
 
 {% endblock %}

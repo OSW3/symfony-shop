@@ -1,5 +1,5 @@
 <?php
-namespace OSW3\Ecommerce\Entity\Category;
+namespace OSW3\Shop\Entity\Category;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -8,7 +8,7 @@ use Ramsey\Uuid\UuidInterface as UUID;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Attribute\Groups;
-use OSW3\Ecommerce\Repository\Category\CategoryRepository;
+use OSW3\Shop\Repository\Category\CategoryRepository;
 
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 #[ORM\Table(name: 'category')]
