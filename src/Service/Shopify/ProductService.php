@@ -9,4 +9,9 @@ class ProductService extends ShopifyProvider
     {
         return ["products", "product"];
     }
+
+    protected function filter($item): bool
+    {
+        return empty($this->vendors) || in_array($item['vendor'], $this->vendors);
+    }
 }

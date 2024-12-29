@@ -23,6 +23,7 @@ abstract class ShopifyProvider
     private string $shopName;
     private array $scopes;
     private string $accessToken;
+    protected array $vendors;
 
     public function __construct(
         #[Autowire(service: 'service_container')] private ContainerInterface $container,
@@ -36,6 +37,7 @@ abstract class ShopifyProvider
         $this->accessToken = $this->params['provider']['shopify']['access_token'];
         $this->scopes      = $this->params['provider']['shopify']['scopes'];
         $this->apiVersion  = "2024-10";
+        $this->vendors     = $this->params['provider']['shopify']['vendors'];//["OSW3", "Test"];
 
         $this->client = $this->connect();
     }
@@ -88,6 +90,10 @@ abstract class ShopifyProvider
         return [];
     }
 
+    protected function filter($item): bool
+    {
+        return true;
+    }
 
     public function count(): int
     {
@@ -106,13 +112,11 @@ abstract class ShopifyProvider
             $response = $this->client->get($this->names()[0], $headers, $query);
 
             if ($response->getStatusCode() !== 200) {
-                dd($response->getBody()->getContents());
-
                 throw new \Exception(sprintf('Failed to fetch %s from Shopify', $this->names()[0]));
             }
 
-            $data = $response->getDecodedBody()[$this->names()[0]] ?? [];
-            $results = array_merge($results, $data);
+            $items = $response->getDecodedBody()[$this->names()[0]] ?? [];
+            $results = array_merge($results, array_filter($items, [$this, 'filter']));
 
             $linkHeader = $response->getHeaders(false)['link'][0] ?? null;
             $query['page_info'] = $this->extractPageInfo($linkHeader);

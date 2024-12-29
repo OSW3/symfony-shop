@@ -39,6 +39,12 @@ return static function($definition)
                     ->prototype('scalar')->end()
                     ->defaultValue([])
                 ->end()
+
+                ->arrayNode('vendors')
+                    ->info('Specifies the list of vendors.')
+                    ->prototype('scalar')->end()
+                    ->defaultValue([])
+                ->end()
             
             ->end()->end()
 
